@@ -1,0 +1,43 @@
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+void startingPage() {
+    cout << "Welcome\tto\tOur\tNew\tGame!" << endl;
+    cout << "Press Enter to continue!" << endl;
+    cin.ignore();
+}
+
+void gameLevel_Show(int level) {
+    level = 0;
+    cout << "Level:\t " << level << endl;
+    cin.ignore();
+}
+
+void addition_Instruction() {
+    cout << "Addition, a mathematical tool, which always used in daily life." << endl;
+    cout << "The mathematical sign is '+', and it means to add up some values. For example, 1 + 1 = 2." << endl;
+    cin.ignore();
+}
+
+void simple_Addition() {
+    int questionNumber = 1;
+    cout << "Question: " << questionNumber << ":\t" << randomNumber_Generator(10) << "\t+\t" << randomNumber_Generator(10);
+}
+
+double randomNumber_Generator(double range) {
+    double simpleNum = rand() % range + 1;
+    return simpleNum;
+}
+
+int level_Initalizer() {
+    int level = 0;
+}
+
+int main()
+{
+    srand(time(NULL));
+    startingPage();
+    gameLevel_Show(level_Initalizer());
+}
